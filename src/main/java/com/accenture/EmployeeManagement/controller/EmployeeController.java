@@ -14,9 +14,11 @@ public class EmployeeController {
 
 	@Autowired
 	EmployeeRepository employeeRepository;
-
+	
+	//get all employees
 	@GetMapping("/getAllEmployees")
 	List<Employee> getEmployees() {
+		
 		List<Employee> empList = employeeRepository.findAll();
 		return empList;
 	}
